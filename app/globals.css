@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-textPrimary antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(122, 30, 116, 0.3) 0%, rgba(218, 165, 32, 0.3) 100%);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
